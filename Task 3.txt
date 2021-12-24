@@ -1,0 +1,42 @@
+1.For the given JSON iterate over all for loops (for, for in, for of, forEach)
+
+var arr = [{
+            firstname: "pravesh",
+            lastname: "monju",
+            education: "B.E Computer Science",
+            percentage: "65%",
+            skill: "web development",
+        }];
+
+        for(var i=0; i<arr.length; i++){
+            var obj = arr[i];
+            for(var key in obj){
+                var value = obj[key];
+                console.log(`${key}:${value}`);
+            }
+        }
+
+2.Create your own resume data in JSON format.
+
+var arr = [{
+            firstname: "pravesh",
+            lastname: "monju",
+            school: "Shrishti",
+            College: "SVCE",
+            tenthscore: "80%",
+            twelvethscore: "85%",
+            education: "B.E Computer Science",
+            percentage: "65%",   
+            programmingskills: "HTML CSS JavaScript",
+            professionalinterest: "Full Stack development",
+            otherinterest: "physcical fitness",
+
+        }];
+
+        for(var i=0; i<arr.length; i++){
+            var obj = arr[i];
+            for(var key in obj){
+                var value = obj[key];
+                console.log(`${key}:${value}`);
+            }
+        }
