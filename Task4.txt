@@ -1,0 +1,366 @@
+1.a.
+
+print odd numbers in array:
+
+var arr = [1,2,3,4,5,6,7,8,9,10];
+var odd_num = [];
+var odd = function (){
+    for(var i=0; i<arr.length; i++){
+        if(arr[i] % 2 != 0){
+            odd_num.push(arr[i]);
+        }
+    }
+    console.log(odd_num);
+}
+
+odd();
+
+1.b.
+
+convert string in title caps in string array:
+
+var s = ["pravesh", "msp", "hello", "guvi"];
+var ss = [];
+
+var titlecaps = function(){
+    for(var i=0; i<s.length; i++){
+        
+        ss.push(s[i].charAt(0).toUpperCase() + s[i].substr(1).toLowerCase());
+    }
+    console.log(ss);
+}
+
+titlecaps();
+
+
+1.c.
+
+sum of numbers in array:
+
+var num = [1,2,3,4,5];
+result = 0;
+var sum = [];
+var sumOfNum = function(){
+for(var i=0; i<num.length; i++){
+        result = result + num[i];
+    }
+    sum.push(result);
+    console.log(result);
+}
+sumOfNum();
+
+1.d.
+
+return prime numbers in array.
+
+var prime = function(){
+    var num = [10, 11, 12, 13, 17, 19, 21, 29];
+    var result = [];
+    for(var i=0; i<num.length; i++){
+        var n = num[i];
+        for(var j=2; j<n; j++){
+            if(n % j === 0){
+                break;
+            }else{
+                result.push(n);
+                break;
+            }
+        }
+    }
+    console.log(result);
+}
+
+prime();
+
+
+
+
+1.e.
+
+palindrome in an array.
+
+
+var palindrome = function(){
+
+var result = [];
+var n = ["121", "123", "414", "4224", "909", "999", "717"];
+    for(var i=0; i<n.length; i++){
+        var num_array = n[i].split("");
+        var reverse_array = num_array.reverse();
+        var reversed = reverse_array.join("");
+        
+        if(n[i] === reversed){
+            result.push(n[i]);
+        }
+    }
+    console.log(result);
+}
+
+palindrome();
+
+
+1.g.
+
+remove duplicates in array.
+
+var duplicates = function(){
+    var arr = [109, 212, 244, 134, 109, 244];
+    var arr1 = [...new Set(arr)];
+    console.log(arr1);
+};
+
+duplicates();
+
+1.h.
+
+rotate an array by k times
+
+function RightRotate(a, n, k)
+{
+     k = k % n;
+    for (let i = 0; i < n; i++) {
+        if (i < k) {
+ 
+            console.log(a[n + i - k]);
+        }
+        else {
+ 
+            console.log((a[i - k]));
+        }
+    }
+}
+let Array = [1, 2, 3, 4, 5];
+let N = Array.length;
+let K = 2;
+
+
+RightRotate(Array, N, K);
+
+3.a.
+
+print odd numbers in an array using arrow function.
+
+var arr = [1,2,3,4,5,6,7,8,9,10];
+var odd_num = [];
+var odd = ()=>{
+    for(var i=0; i<arr.length; i++){
+        if(arr[i] % 2 != 0){
+            odd_num.push(arr[i]);
+        }
+    }
+    console.log(odd_num);
+}
+
+odd();
+
+3.b.
+
+print all the strings to title caps.
+
+var s = ["pravesh", "msp", "hello", "guvi"];
+var ss = [];
+
+var titlecaps = ()=>{
+    for(var i=0; i<s.length; i++){
+        
+        ss.push(s[i].charAt(0).toUpperCase() + s[i].substr(1).toLowerCase());
+    }
+    console.log(ss);
+}
+
+titlecaps();
+
+3.c
+
+print sum of numbers in an array.
+
+var num = [1,2,3,4,5];
+result = 0;
+var sum = [];
+var sumOfNum = ()=>{
+for(var i=0; i<num.length; i++){
+        result = result + num[i];
+    }
+    sum.push(result);
+    console.log(result);
+}
+sumOfNum();
+
+3.d
+
+return all the prime numbers in an array.
+
+var prime = ()=>{
+    var num = [10, 11, 12, 13, 17, 19, 21, 29];
+    var result = [];
+    for(var i=0; i<num.length; i++){
+        var n = num[i];
+        for(var j=2; j<n; j++){
+            if(n % j === 0){
+                break;
+            }else{
+                result.push(n);
+                break;
+            }
+        }
+    }
+    console.log(result);
+}
+
+prime();
+
+
+3.e.
+
+return all the palindrome in an array.
+
+var palindrome = ()=>{
+
+var result = [];
+var n = ["121", "123", "414", "4224", "909", "999", "717"];
+    for(var i=0; i<n.length; i++){
+        var num_array = n[i].split("");
+        var reverse_array = num_array.reverse();
+        var reversed = reverse_array.join("");
+        
+        if(n[i] === reversed){
+            result.push(n[i]);
+        }
+    }
+    console.log(result);
+}
+
+palindrome();
+
+
+
+2.Solutions
+
+a.function addfive(n){
+    console.log(n+5);
+}
+
+addfive(5);
+addfive(0);
+addfive(-5);
+
+b.var num = 5;
+function getOpposite(num) {
+    console.log(-num);
+}
+var result = getOpposite(num)
+
+c.var min = 5;
+function toSeconds(min) {
+    console.log(min * 60);
+}
+var secs = toSeconds(min)
+
+d.var mystr = "5";
+function toInteger(mystr) {
+    console.log(parseInt(mystr));
+}
+var myint = toInteger(mystr)
+
+e.var myint = 0;
+function nextNumber(myint) {
+    console.log(myint + 1);
+}
+var myNextint = nextNumber(myint)
+
+f.var arr = [1, 2, 3];
+function getFirstElement(arr) {
+    console.log(arr[0]);
+}
+var data = getFirstElement(arr)
+
+g.var arr = 2;
+function hourToSeconds(arr) {
+    console.log(arr * 3600);
+}
+var data = hourToSeconds(arr)
+
+f.function findPerimeter(num1,num2) {
+    console.log(2 * (num1 + num2));
+}
+var peri = findPerimeter(6,7)
+
+g.function lessThan100(num1,num2) {
+    if(num1 + num2 < 100){
+        console.log("true");
+    }else{
+        console.log("false");
+    }
+}
+var res = lessThan100(22,15)
+
+h.function remainder(num1,num2) {
+    console.log(num1 % num2);
+}
+var res = remainder(1,3)
+
+i.function CountAnimals(tur,horse,pigs) {
+    var l1 = tur * 2;
+    var l2 = horse * 4;
+    var l3 = pigs * 4
+    console.log(l1 + l2 + l3);
+}
+var legs = CountAnimals(2,3,5)
+
+j.function divisibleByFive(num1) {
+    if(num1 % 5 == 0){
+        console.log("true");
+    }else{
+        console.log("false");
+    }
+}
+var divisible = divisibleByFive(16)
+
+k.function isEven(num){
+    if(num % 2 == 0){
+        console.log("true");
+    }else{
+        console.log("false");
+    }
+}
+var even = isEven(5)
+
+l.function areBothOdd(num1, num2){
+    if(num1 % 2 !== 0 && num2 % 2 !== 0){
+        console.log("true");
+    }else{
+        console.log("false");
+    }
+}
+
+areBothOdd(1,1);
+
+m.function getFullName(firstName, lastName){
+    console.log(`${firstName} ${lastName}`);
+}
+console.log("guvi", "geek");
+
+n.function getLengthOfWord(word1){
+    console.log(word1.length);
+}
+
+getLengthOfWord("hello")
+
+o.function isSameLength(word1, word2){
+    if(word1.length == word2.length){
+        console.log("true");
+    }else{
+        console.log("false");
+    }
+    
+}
+
+p.function getNthElement(array,n){
+    console.log(array[n]);
+}
+
+getNthElement([1,2,3], 1);
+
+
+
+
