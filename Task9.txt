@@ -1,0 +1,139 @@
+1.Solving problems using array functions on rest countries data.
+
+a.Get all the countries from Asia continent /region using Filter function:
+
+Solution: var promise = new Promise(function (resolve, reject) {
+            var xhttp = new XMLHttpRequest();
+
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    resolve(xhttp.responseText);
+                }
+                if (this.readyState == 4 && this.status !== 200) {
+                    reject("Error")
+                }
+            };
+
+            xhttp.open('GET', "https://restcountries.com/v3.1/all", true);
+            xhttp.send();
+        });
+
+        promise.then(function (result) {
+            var data = JSON.parse(result);
+            var res = data.filter((arr) => arr.continents == "Asia");
+            for(var i=0; i<res.length; i++){
+                console.log(res[i].name.common);
+            }
+
+        });
+
+
+b.Get all the countries with a population of less than 2 lakhs using Filter function.
+
+Solution:   var promise = new Promise(function (resolve, reject) {
+            var xhttp = new XMLHttpRequest();
+
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    resolve(xhttp.responseText);
+                }
+                if (this.readyState == 4 && this.status !== 200) {
+                    reject("Error")
+                }
+            };
+
+            xhttp.open('GET', "https://restcountries.com/v3.1/all", true);
+            xhttp.send();
+        });
+
+        promise.then(function (result) {
+            var data = JSON.parse(result);
+            var res = data.filter((arr) => arr.population < 200000);
+            for(var i=0; i<res.length; i++){
+                console.log(res[i].name.common);
+            }
+        });
+
+c.Print the following details name, capital, flag using forEach function.
+
+Solution:   var promise = new Promise(function (resolve, reject) {
+            var xhttp = new XMLHttpRequest();
+
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    resolve(xhttp.responseText);
+                }
+                if (this.readyState == 4 && this.status !== 200) {
+                    reject("Error")
+                }
+            };
+
+            xhttp.open('GET', "https://restcountries.com/v3.1/all", true);
+            xhttp.send();
+        });
+
+        promise.then(function (result) {
+            var data = JSON.parse(result);
+            // console.log(data);
+            data.forEach(myFunction);
+
+            function myFunction(item, index){
+                console.log(`Name:${item.name.common} Capital:${item.capital} Flag:${item.flag}`);
+                
+            }
+
+                    });
+
+d.Print the total population of countries using reduce function
+
+
+Solution:   var promise = new Promise(function (resolve, reject) {
+            var xhttp = new XMLHttpRequest();
+
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    resolve(xhttp.responseText);
+                }
+                if (this.readyState == 4 && this.status !== 200) {
+                    reject("Error")
+                }
+            };
+
+            xhttp.open('GET', "https://restcountries.com/v3.1/all", true);
+            xhttp.send();
+        });
+
+        promise.then(function (result) {
+            var data = JSON.parse(result);
+            for(var i=0; i<data.length; i++){
+                console.log(data[i].population);
+            }
+            });
+
+e.
+
+Solution: 
+        
+var promise = new Promise(function (resolve, reject) {
+            var xhttp = new XMLHttpRequest();
+
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    resolve(xhttp.responseText);
+                }
+                if (this.readyState == 4 && this.status !== 200) {
+                    reject("Error")
+                }
+            };
+
+            xhttp.open('GET', "https://restcountries.com/v3.1/all", true);
+            xhttp.send();
+        });
+
+        promise.then(function (result) {
+            var data = JSON.parse(result);
+            for(var i=0; i<data.length; i++){
+                console.log(data[i].currencies);
+            }     
+            });
+            
